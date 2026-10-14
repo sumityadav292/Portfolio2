@@ -168,7 +168,7 @@ export default function App() {
       <footer className="footer">
         <a href="https://sumityadavportfolio1.netlify.app/"   target="_blank" rel="noopener noreferrer"  className="brand">༒☬Sumit Yadav☬༒<span>.</span></a>
         <p style={{ fontWeight: "bold", fontSize: "11px", textAlign: "center", marginLeft: "-220px", marginBottom: "-20px" }}>Designed & built by Sumit Yadav © {new Date().getFullYear()}</p>
-        <a href="#home"  style={{ fontWeight: "bold", fontSize: "15px", marginBottom:"-5px" }}>Back to top ↑</a>
+        <a href="#home"  style={{ fontWeight: "bold", fontSize: "15px", marginBottom:"-5px" , color: '#D16587' }}>Back to top <b>⬆️</b></a>
       </footer>
     </>
   )

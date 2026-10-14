@@ -53,7 +53,7 @@ export default function Hero() {
           <h1> 
             SUMIT
             <br />
-            <span>YADAV.</span>
+            <span>YADAV</span>
           </h1>
 
           <h2>
@@ -135,7 +135,7 @@ export default function Hero() {
 
           <div className="floating-tag tag-react">React.js</div>
           <div className="floating-tag tag-node">Node.js</div>
-          <div className="floating-tag tag-code">{"</>"}</div>
+          <div className="floating-tag tag-code">Express.js</div>
 
           <div className="profile-card">
             <img src="/src/assets/sum.jpg" alt="Sumit Yadav" />
