@@ -83,7 +83,7 @@ export default function Hero() {
               rel="noreferrer"
               aria-label="GitHub"
             >
-              <span style={{ fontSize: '14px', fontWeight: 800 }}>
+              <span style={{ fontSize: '34px', fontWeight: 800 }}>
                 GH
               </span>
             </a>
@@ -94,7 +94,7 @@ export default function Hero() {
               rel="noreferrer"
               aria-label="LinkedIn"
             >
-              <span style={{ fontSize: '14px', fontWeight: 800 }}>
+              <span style={{ fontSize: '34px', fontWeight: 800 }}>
                 in
               </span>
             </a>

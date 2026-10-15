@@ -1,0 +1,205 @@
+.earth-scene {
+	position: relative;
+	isolation: isolate;
+	width: 100%;
+	min-height: min(760px, 88vh);
+	padding-top: 112px;
+	box-sizing: border-box;
+	overflow: hidden;
+	background:
+		radial-gradient(ellipse at 52% 42%, rgba(20, 59, 104, 0.38), transparent 47%),
+		#030713;
+	color: #f3f7ff;
+	font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.earth-canvas,
+.earth-vignette {
+	position: absolute;
+	inset: 0;
+}
+
+.earth-canvas canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+	cursor: grab;
+	touch-action: none;
+}
+
+.earth-canvas canvas.is-dragging {
+	cursor: grabbing;
+}
+
+.earth-vignette {
+	z-index: 1;
+	pointer-events: none;
+	background:
+		linear-gradient(90deg, rgba(3, 7, 19, 0.84), transparent 55%),
+		linear-gradient(0deg, rgba(3, 7, 19, 0.52), transparent 30%);
+}
+
+.earth-copy,
+.earth-index,
+.earth-coordinate,
+.earth-error {
+	position: absolute;
+	z-index: 2;
+}
+
+.earth-copy {
+	left: clamp(28px, 9vw, 140px);
+	bottom: clamp(46px, 10vh, 100px);
+	max-width: 540px;
+	pointer-events: none;
+}
+
+.earth-kicker {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 0 0 20px;
+	color: #a9d9ff;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.22em;
+}
+
+.earth-kicker span {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #67c7ff;
+	box-shadow: 0 0 14px #43aaff;
+}
+
+.earth-title {
+	margin: 0;
+	font-size: clamp(38px, 5.6vw, 76px);
+	font-weight: 500;
+	letter-spacing: -0.065em;
+	line-height: 0.98;
+	text-shadow: 0 4px 32px rgba(0, 0, 0, 0.35);
+}
+
+.earth-title span {
+	color: #a7c9e9;
+}
+
+.earth-subtitle {
+	margin: 22px 0 0;
+	color: rgba(220, 233, 250, 0.72);
+	font-size: 13px;
+	letter-spacing: 0.025em;
+}
+
+.earth-hint {
+	margin: 38px 0 0;
+	color: rgba(177, 207, 237, 0.7);
+	font-size: 9px;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+}
+
+.earth-hint span {
+	margin-left: 8px;
+	color: #79c6ff;
+	font-size: 15px;
+}
+
+.earth-index {
+	top: 42px;
+	right: clamp(28px, 5vw, 72px);
+	display: grid;
+	gap: 7px;
+	color: rgba(220, 235, 255, 0.86);
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	text-align: right;
+}
+
+.earth-index span {
+	color: #83c7f6;
+	font-size: 8px;
+	letter-spacing: 0.23em;
+}
+
+.earth-coordinate {
+	right: clamp(28px, 5vw, 72px);
+	bottom: 38px;
+	color: rgba(188, 214, 240, 0.56);
+	font-size: 8px;
+	letter-spacing: 0.16em;
+}
+
+.earth-coordinate span {
+	padding: 0 6px;
+	color: #63b7f1;
+}
+
+.earth-error {
+	top: 50%;
+	left: 50%;
+	max-width: min(440px, calc(100% - 40px));
+	margin: 0;
+	padding: 12px 16px;
+	transform: translate(-50%, -50%);
+	border: 1px solid rgba(255, 168, 168, 0.35);
+	border-radius: 8px;
+	background: rgba(45, 12, 22, 0.9);
+	color: #ffd5d5;
+	font-size: 13px;
+	text-align: center;
+}
+
+@media (max-width: 600px) {
+	.earth-scene {
+		min-height: 620px;
+		padding-top: 78px;
+	}
+
+	.earth-vignette {
+		background:
+			linear-gradient(0deg, rgba(3, 7, 19, 0.92), transparent 62%),
+			linear-gradient(180deg, rgba(3, 7, 19, 0.32), transparent 30%);
+	}
+
+	.earth-copy {
+		right: 24px;
+		bottom: 65px;
+		left: 24px;
+	}
+
+	.earth-title {
+		font-size: clamp(42px, 11vw, 60px);
+	}
+
+	.earth-subtitle {
+		max-width: 280px;
+		font-size: 12px;
+		line-height: 1.6;
+	}
+
+	.earth-hint {
+		margin-top: 24px;
+	}
+
+	.earth-index {
+		top: 24px;
+		right: 24px;
+	}
+
+	.earth-coordinate {
+		right: 24px;
+		bottom: 24px;
+		left: 24px;
+		font-size: 7px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.earth-canvas canvas {
+		cursor: default;
+	}
+}

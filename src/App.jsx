@@ -1,6 +1,7 @@
 
 import Navbar from "./component/Navbar.jsx";
 import Hero from "./component/Hero.jsx";
+import Earth from "./component/pages/1.jsx";
 
 const skills = [
   'HTML', 'CSS', 'JavaScript', 'React.js',
@@ -61,6 +62,7 @@ function SectionHeading({ label, title, accent }) {
 export default function App() {
   return (
     <>
+    <Earth />
       <Navbar />
       <main>
         <Hero />
